@@ -23,3 +23,11 @@
   - sudo docker build -t my_image .
   - sudo docker tag my_image noaaepic/input-data:20221101
   - sudo docker push noaaepic/input-data:20221101
+- ***steps to create input-data container***
+  - git clone https://github.com/jkbk2004/fv3-input-data 
+  - cp -r input-data-20220414 fv3-input-data
+  - cd fv3-input-data
+  - docker build -t my_image .
+  - docker tag my_image noaaepic/input-data:20220414
+  - docker login --username noaaepic
+  - docker push noaaepic/input-data:20220414
